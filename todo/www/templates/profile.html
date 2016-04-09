@@ -1,0 +1,55 @@
+<ion-view view-title="xxx医生"  ng-controller="PlaylistsCtrl">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear icon ion-ios-heart-outline">
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="app_profile" overflow-scroll="true"  scrollbar-y="false">
+        <div class="profile-item-1">
+            <div class="row">
+                <div class="col col-33">
+                    <img src="css/Images/luoxiaohei.jpg" alt="">
+                </div>
+                <div class="col col-67">
+                    <h3>Dr Kaushik</h3>
+                    <h4>
+                        <i class="icon ion-ios-telephone-outline"></i>
+                        +1 475-365-4545
+                    </h4>
+                    <p>
+                        这里是医生的一些比较详细的信息，但是不是太多.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="profile-contact">
+            <ion-list>
+                <ion-item class="profile-contact-button">
+                    <a href="#" class="icon ion-ios-email-outline"></a>
+                    <a href="#/app/playlists/profile/dialog" class="icon ion-ios-chatbubble-outline"></a>
+                    <a class="icon ion-ios-telephone-outline" ng-click="history()"></a>
+                </ion-item>
+                <ion-item class="profile-contact-detail">
+                    <div>
+                        <p>FULL NAME</p>
+                        <p>Dr Kaushik V Shah</p>
+                    </div>
+                    <div>
+                        <p>Email</p>
+                        <p>DRKAUSHIK@gmail.com</p>
+                    </div>
+                    <div>
+                        <p>CERTIFICATION</p>
+                        <p>ABMS, AAMA, ABIM</p>
+                    </div>
+                    <div>
+                        <p>DUTY TIME</p>
+                        <p>8:30 AM - 9:30 PM</p>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    
+                </ion-item>
+            </ion-list>
+        </div>
+    </ion-content>
+</ion-view>

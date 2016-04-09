@@ -1,0 +1,21 @@
+<ion-view view-title="详情" ng-controller="PlaylistsCtrl">
+	<ion-nav-buttons side="right">
+	  <button class="button button-clear icon ion-ios-arrow-right">
+
+	  </button>
+	</ion-nav-buttons>
+  <ion-content class="app_doctor_detail">
+  	<div class="detailImg">
+  		<img src="css/Images/luoxiaohei.jpg" alt="医生照片">
+  	</div>
+    <ion-list>
+      <ion-item ng-repeat="detail in details">
+        <h3>{{ detail.title1 }}</h3>
+        <p>{{ detail.content1 }}</p>
+      </ion-item>
+    </ion-list>
+    <div class="detailButton">
+        	<a href="#" ui-sref="app_appointment">Book an Appointment</a>
+        </div>
+  </ion-content>
+</ion-view>

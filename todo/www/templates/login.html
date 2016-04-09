@@ -1,0 +1,65 @@
+<!-- <ion-modal-view>
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+    <form ng-submit="doLogin()">
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" ng-model="loginData.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" ng-model="loginData.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive" type="submit">Log in</button>
+        </label>
+      </div>
+    </form>
+  </ion-content>
+</ion-modal-view> -->
+
+<ion-view view-title="登录">
+  
+  <ion-content class="app_login" overflow-scroll="true">
+        <div class="logo">
+          <img src="css/Images/luoxiaohei.jpg" alt="">
+        </div>
+        <form id="loginForm">
+          <label class="item item-input">
+                <input type="text" name="" value="" placeholder="User name or email">
+            </label>
+            <label class="item item-input">
+                <input type="password" name="" value="" placeholder="password">
+            </label>
+            <div class="forgetPwd">
+                <a href="#">Forget your password?</a>
+            </div>
+            <input type="button" name="" value="Sign in">
+        </form>
+        <div class="fastLogin">
+            <p>or</p>
+            <ul class="row">
+                <li class="col">
+                    <a href="#" class="icon ion-social-facebook"></a>
+                </li>
+                <li class="col">
+                    <a href="#" class="icon ion-social-twitter"></a>
+                </li>
+                <li class="col">
+                    <a href="#" class="icon ion-social-googleplus"></a>
+                </li>
+            </ul>
+        </div>
+        <div class="bottomA">
+            <a href="#/app/regist">
+                New user? SIGN UP
+            </a>
+        </div>
+  </ion-content>
+</ion-view>

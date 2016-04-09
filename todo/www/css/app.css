@@ -1,0 +1,277 @@
+
+* {font-family: "Lantinghei SC", "Open Sans", Arial, "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", "STHeiti", "WenQuanYi Micro Hei", SimSun, sans-serif; box-sizing: border-box;}
+html, body {min-height: 100%;  margin: 0 auto; background-color: #0ebbf3;}
+body { background-color: #0ebbf3; } 
+
+
+.title { color: #ffffff; }
+button.button:before { color: #ffffff; }
+.row { padding: 0; }
+.row> .col { padding: 0; }
+a { text-decoration: none; }
+textarea { resize: none; }
+input, textarea { background-color: transparent; }
+
+#mark { width: 100%;height: 100%;position: absolute; top: 0px; left: 0px; background-color: #ffffff;z-index: 9999; }
+
+.header-bg .title { text-align: center !important; }
+.header-bg>.buttons { width: 44px; }
+.header-bg .buttons span>a:before { color: #ffffff; }
+.header-bg>.back-button { color: #ffffff; }
+
+
+
+
+
+.home-search { width: 94%; margin: 0 auto; padding-bottom: 15px; }
+.home-search label { border-radius: 100px; padding-top: 0px; padding-bottom: 0px; }
+.home-search input::-webkit-input-placeholder { color: #aca; }
+.cardList>.item { position: relative; }
+.cardList>.item>div { display: table-cell; }
+.cardList .cardImg { width: 100px; }
+.cardCategory { padding: 0px 0px; }
+.cardCategory+div { padding-top: 10px; }
+.cardCategory+div>span { padding: 0px 15px 0px 0px; color: #959595; line-height: 30px; }
+.cardCategory+div>span:before { padding-right: 6px; font-size: 20px; font-weight: bold; vertical-align: middle; }
+.cardAdd { position: absolute; right: 20px; bottom: 10px; cursor: pointer; }
+.cardAdd>span { width: 30px; height: 30px; border-radius: 50%; background-color: #0ebbf3; display: block;text-align: center; }
+.cardAdd>span:before { font-size: 30px; color: #fff;  }
+
+
+.cardImg>img { width: 140px; height: 120px; display: block; }
+.item { padding: 0; border: 0; }
+
+.sideLogo>img { width: 100%; height: 100%; border-radius: 50%; max-width: 140px;}
+.sideItem {  background-color: #0ebbf3; color: #ffffff; }
+.sideItem>a { color: #000000; text-decoration: none; color: #ffffff; padding: 6px 10px; display: block; font-size: 16px !important; }
+.sideItem>a>i { padding-left: -10px; padding-right: 10px; }
+.sideItem>a>i:before { font-size: 26px; vertical-align: middle; width: 20px; }
+
+
+
+.app_more { background-color: rgba(240,240,240,0.6); }
+.item, .item a { text-decoration: none; color: #959595; font-size: 14px; }
+.app_more .icon { color: #959595; }
+.app_more .item { padding: 10px 10px 10px 30px; }
+.app_more h4 { padding-left: 10px; }
+.app_more .list .item>a { display: block; }
+
+.scroll-content {  }
+
+.app_home .cardInfo { padding: 10px 15px; }
+.app_home .cardInfo>div>p { line-height: 30px; }
+.app_home .list>.item>.row { border-bottom: 2px solid #eee; }
+.side_menu {  }
+.side_menu a { color: #ffffff; }
+
+.app_home .row>.col:nth-child(1) { width: 140px; }
+
+
+
+
+.app_register {  }
+.app_register .login { margin: 0 auto; }
+.app_register .login>img { width: 100%; height: auto; display: block; margin: 0 auto; max-width: 200px; }
+
+.app_profile {  }
+.app_profile .profile-item-1 { background-color: #0ebbf3; padding: 15px 15px 25px;  }
+.app_profile .col-33>img { width: 100%; display: block; border-radius: 50%; max-width: 200px; }
+.app_profile .col-67 { padding-left: 15px; color: #ffffff; font-size: 12px; padding-top: 10px; }
+.app_profile .col-67>h3 { color: #ffffff; font-size: 16px; }
+.app_profile .col-67>h4 { color: #ffffff; font-size: 14px; }
+.app_profile .profile-item-1 .icon { padding-right: 6px; }
+.app_profile .profile-item-1 p { height: 40px; overflow: hidden; }
+.profile-contact {  }
+.profile-contact .profile-contact-button { width: 100%; text-align: center; background-color: transparent; position: absolute; top: -18px; border-color: transparent; z-index: 3; }
+.profile-contact-button>a { display: inline-block; width: 36px; height: 36px; background-color: #0ebbf3; border-radius: 50%; color: #ffffff; box-shadow: 0px 0px 1px #959595; margin: 0px 10px; }
+.profile-contact-button>a:before { font-size: 26px; line-height: 36px; }
+.profile-contact-detail { margin-top: 26px; }
+.profile-contact-detail>div { padding: 6px 15px; font-weight: bold; }
+.profile-contact-detail>div>p:nth-child(1) { color: #959595; }
+.profile-contact-detail>div>p:nth-child(2) { color: #555; border-bottom: 1px solid #dddddd; padding-bottom: 3px; }
+
+
+.app_find {  }
+.search-wrap { background-color: #0ebbf3; padding: 4px; }
+.app_find .search { width: 90%; margin: 0 auto; border-radius: 100px; }
+.app_find .search>label { border-radius: 100px; }
+.app_find .search>label.item-input { background-color: white; padding: 0 16px;  }
+.app_find .search>label.item-input>.icon { font-size: 20px; padding-right: 10px; }
+.app_find .search>label.item-input>input { background-color: white; font-size: 15px; line-height: 16px; }
+.app_find .cardImg { height: 140px; overflow: hidden; }
+.app_find .cardImg>img { width: 100%; height: auto; margin-top: -120px; }
+.app_find .cardInfo { padding: 4px 15px; }
+.app_find .cardInfo .cardName { padding-bottom: 6px; }
+.app_find .cardInfo span { margin-right: 10px; }
+.app_find .cardInfo span.icon:before { color: #0ebbf3; margin-right: 6px; font-size: 20px; vertical-align: bottom; }
+.app_find .cardInfo .cardCategory>p { color: #959595; font-size: 12px; }
+
+.app_doctor_detail {  }
+.app_doctor_detail .detailImg { width: 100%; height: 200px; overflow: hidden; }
+.app_doctor_detail .detailImg>img { width: 100%; }
+.app_doctor_detail .list { padding: 15px; }
+.app_doctor_detail .list .item { padding: 10px 0px; }
+.app_doctor_detail .list .item>h3 {font-size: 14px; font-weight: bold;}
+.app_doctor_detail .list .item>p { white-space: normal; color: #959595; }
+.app_doctor_detail .detailButton { padding-bottom: 28px; }
+.app_doctor_detail .detailButton>a { margin: 0 auto; display:block; color: #ffffff; background-color: #0ebbf3; width: 80%; padding: 10px; text-align: center; border-radius: 100px;  }
+
+.app_app {  }
+.app_app #appForm { padding: 20px; }
+.app_app .item { margin-bottom: 10px; }
+#appForm .formType, #appForm input, #appForm textarea, #appForm select { border: 1px solid #dddddd; border-radius: 2px; padding: 6px; font-size: 14px; width: 100%; }
+#appForm select option { border: 0 none; border-color: transparent; }
+#appForm .row .col-50:nth-child(1) { padding-right: 10px; }
+#appForm .row .col-50:nth-child(2) { padding-left: 10px; }
+#appForm textarea {  }
+#appForm .formChoose { padding-top: 15px; }
+#appForm .formChoose label { width: 100%; text-align: left; display: block; padding: 4px 0; }
+#appForm .formChoose label>input { display: none; }
+#appForm .formChoose label>span { font-size: 14px; }
+#appForm .formChoose label>span:before { color: #0ebbf3; margin-right: 10px; width: 26px; height: 26px;  vertical-align: bottom; font-size: 30px; }
+#appForm .formChoose label>span:after { color: #0ebbf3; }
+#formSubmit { width: 90% !important; margin: 30px auto 10px auto; display: block; background-color: #0ebbf3; border-radius: 100px !important; color: #ffffff; padding: 6px !important; font-size: 16px !important; }
+
+
+
+
+
+.app_login { background-color: #0ebbf3; text-align: center; padding-top: 4px; }
+.app_login .logo { width: 35%; margin: 0px auto 0px auto; max-width: 200px;}
+.app_login .logo>img { width: 100%; display: block; border-radius: 50%;  }
+#loginForm { background-color: transparent; margin: 0; }
+#loginForm label { width: 80%;margin: 15px auto; border-radius: 100px; text-align: center; }
+#loginForm input { text-align: center; width: 100%; padding: 4px 10px; }
+#loginForm .forgetPwd a { color: #fff; font-style: italic; }
+#loginForm input[type="button"] { width: 80%; margin: 20px auto; border-radius: 100px; background-color: transparent; border: 1px solid #ffffff; color: #ffffff; font-size: 16px; padding: 6px; }
+.app_login .fastLogin { width: 100%; }
+.app_login .fastLogin>p {  color: #fff; }
+.fastLogin li.col:nth-child(1) { text-align: right; }
+.fastLogin li.col:nth-child(3) { text-align: left; }
+.fastLogin li>a { display: inline-block; height: 36px; width: 36px; border: 1px solid #fff; color: #fff; text-align: center; border-radius: 50%; }
+.fastLogin li>a:before { line-height: 36px; font-size: 24px; }
+
+.app_login .bottomA { width: 100%; padding: 15px; }
+.bottomA>a {  color: #fff; }
+
+
+/* .app_login .scroll { min-height: 100%; } */
+
+
+
+
+
+
+.app_register { background-color: #0ebbf3; }
+.app_register .logo { width: 35%; margin: 0px auto 0px auto; max-width: 200px; }
+.app_register .logo>img { width: 100%; display: block; border-radius: 50%;  }
+
+
+#registerForm { background-color: transparent; margin: 0; }
+#registerForm label { width: 80%;margin: 15px auto; border-radius: 100px; text-align: center; }
+#registerForm input { text-align: center; width: 100%; padding: 4px 10px; }
+#registerForm input[type="button"] { width: 80%; margin: 30px auto; border-radius: 100px; background-color: transparent; border: 1px solid #ffffff; color: #ffffff; font-size: 16px; padding: 6px; display: block; }
+
+.app_register .bottomA { width: 100%; text-align: center; margin: 10px auto; }
+
+
+
+
+
+
+@media only screen and (min-width: 321px) and (max-width: 375px) {
+	.app_login .fastLogin { padding-top: 30px; }
+	.app_login .fastLogin>p {  padding-bottom:  20px; }
+	.app_login .bottomA { padding: 40px; }
+
+	.app_register { padding-top: 30px; }
+	#registerForm { margin-top: 20px; }
+}
+@media only screen and (min-width: 376px) and (max-width: 414px) {
+	.app_login  { padding-top: 24px; }
+	.app_login .fastLogin { padding-top: 50px; }
+	.app_login .fastLogin>p {  padding-bottom:  30px; }
+	.app_login .bottomA { padding: 40px; }
+
+	.app_register { padding-top: 30px; }
+	#registerForm { margin-top: 20px; }
+}
+@media only screen and (min-width: 415px) {
+	#loginForm { margin-top: 20px; margin-bottom: 20px; }
+	.app_login  { padding-top: 24px; }
+	.app_login .fastLogin { padding-top: 50px; }
+	.app_login .fastLogin>p {  padding-bottom:  30px; }
+	.app_login .bottomA { padding: 40px; }
+
+	.app_register { padding-top: 50px; }
+	#registerForm { margin-top: 40px; }
+}
+
+
+
+
+#mark {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#mark .loading {
+    margin-top: 60%;
+    text-align: center;
+}
+
+@media screen and (max-height: 568px) {
+    html,
+    body {
+        overflow-y: scroll;
+    }
+}
+
+.loading {
+    width: 80px;
+    height: 40px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.loading span {
+    display: inline-block;
+    width: 8px;
+    height: 100%;
+    border-radius: 4px;
+    background: lightgreen;
+    -webkit-animation: load 1s ease infinite;
+}
+
+@-webkit-keyframes load {
+    0%,
+    100% {
+        height: 40px;
+        background: lightgreen;
+    }
+    50% {
+        height: 70px;
+        margin: -15px 0;
+        background: lightblue;
+    }
+}
+
+.loading span:nth-child(2) {
+    -webkit-animation-delay: 0.2s;
+}
+
+.loading span:nth-child(3) {
+    -webkit-animation-delay: 0.4s;
+}
+
+.loading span:nth-child(4) {
+    -webkit-animation-delay: 0.6s;
+}
+
+.loading span:nth-child(5) {
+    -webkit-animation-delay: 0.8s;
+}

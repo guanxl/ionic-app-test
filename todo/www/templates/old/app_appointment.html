@@ -1,0 +1,121 @@
+<ion-view view-title="Appointment">
+    <ion-nav-buttons side="left">
+        <button class="button button-clear icon ion-ios-arrow-left" ui-sref="app_home">
+        </button>
+    </ion-nav-buttons>
+    <ion-nav-buttons side="right">
+        <button class="button button-clear">
+        </button>
+    </ion-nav-buttons>
+    <ion-content class="app_app">
+        <form id="appForm">
+            <ion-list>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-100">
+                            <select name="" id="" class="formType">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">2</option>
+                                <option value="">2</option>
+                                <option value="">2</option>
+                                <option value="">2</option>
+                            </select>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-50">
+                            <input type="text" placeholder="first name">
+                        </div>
+                        <div class="col col-50">
+                            <input type="text" placeholder="last name">
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-100">
+                            <input type="email" placeholder="Email">
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-100">
+                            <input type="tel" name="" value="" placeholder="Mobile number">
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-100">
+                            <textarea rows="3" name="" placeholder="Address"></textarea>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-50">
+                            <select name="">
+                                <option value="">北京</option>
+                                <option value="">上海</option>
+                                <option value="">杭州</option>
+                                <option value="">深圳</option>
+                                <option value="">广州</option>
+                            </select>
+                        </div>
+                        <div class="col col-50">
+                            <select name="">
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                                <option value=""> XX 区</option>
+                            </select>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                        <div class="col col-100">
+                            <input type="text" name="" value="" placeholder="Zipcode">
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="formChoose">
+                    <div class="row">
+                        <div class="col col-100">
+                            <h3>When is the best time to get a hold of you?</h3>
+                            <label>
+                                <input type="radio" name="1" value="" placeholder="">
+                                <span class="icon ion-ios-checkmark">Morning</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="1" value="" placeholder="">
+                                <span class="icon ion-ios-checkmark">Afternoon</span>
+                            </label>
+                            <label>
+                                <input type="radio" name="1" value="" placeholder="">
+                                <span class="icon ion-ios-checkmark">Evening</span>
+                            </label>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item>
+                    <div class="row">
+                    	<div class="col col-100">
+                    		<input type="submit" name="" value="Submit" id="formSubmit" ui-sref="app_doctor_detail">
+                    	</div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </form>
+    </ion-content>
+</ion-view>

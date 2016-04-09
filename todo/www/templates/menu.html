@@ -1,0 +1,108 @@
+<!-- <ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+    <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button>
+      </ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+
+  <ion-side-menu side="left">
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Left</h1>
+    </ion-header-bar>
+    <ion-content>
+      <ion-list>
+        <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>
+        <ion-item menu-close href="#/app/search">
+          Search
+        </ion-item>
+        <ion-item menu-close href="#/app/browse">
+          Browse
+        </ion-item>
+        <ion-item menu-close href="#/app/playlists">
+          Playlists
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus> -->
+<ion-side-menus enable-menu-width-back-views="false">
+    <ion-side-menu-content class="calm-bg" drag-content="false">
+        <ion-nav-bar class="header-bg">
+            <ion-nav-back-button>
+            </ion-nav-back-button>
+
+            <ion-nav-buttons side="left">
+                <button menu-toggle="left" class="button button-clear icon ion-android-menu"></button>
+            </ion-nav-buttons>
+            
+        </ion-nav-bar>
+        <ion-nav-view animation="slide-right-left" name="menuContent">
+            <!-- Center content -->
+        </ion-nav-view>
+    </ion-side-menu-content>
+    <ion-side-menu side="left" width="260" class="header-bg">
+        <!-- <ion-header-bar class="header-bg"></ion-header-bar> -->
+        <ion-content  >
+            <div class="col col-100 sideLogo" style="padding: 15px; display: flex; display: -webkit-flex; display: -webkit-box; -webkit-box-align: center; -webkit-align-items: center; align-items: center; ">
+                <div>
+                    <img src="css/Images/d1.png" alt="" style="width: 80px;height: 80px;border-radius: 50%;">
+                </div>
+                <div style="padding-left: 15px; color: white;">
+                    <div class="">doctor name</div>
+                    <div> <i class="icon ion-ios-location-outline"> </i> USA USA USA</div>
+                </div>
+            </div>
+            <ion-list class="side_menu">
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/playlist">
+                        <i class="icon ion-ios-home-outline"></i> 主页
+                    </a>
+                </ion-item>
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/search">
+                        <i class="icon ion-ios-search"></i> 寻找医生
+                    </a>
+                </ion-item>
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/collection">
+                        <i class="icon ion-ios-person"></i> 我的收藏
+                    </a>
+                </ion-item>
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/login">
+                        <i class="icon ion-ios-bolt-outline"></i> 登录
+                    </a>
+                </ion-item>
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/regist">
+                        <i class="icon ion-ios-pulse"></i> 注册
+                    </a>
+                </ion-item>
+                <!-- <ion-item class="sideItem">
+                    <a menu-close href="#/app/playlists/profile/dialog">
+                        <i class="icon ion-ios-compose-outline"></i> 预约
+                    </a>
+                </ion-item> -->
+                <ion-item class="sideItem">
+                    <a menu-close href="#/app/more">
+                        <i class="icon ion-ios-more"></i> 更多
+                    </a>
+                </ion-item>
+                <ion-item class="sideItem">
+                    <a href="#">
+                        <i class="icon ion-ios-undo-outline"></i> 退出
+                    </a>
+                </ion-item>
+            </ion-list>
+        </ion-content>
+    </ion-side-menu>
+</ion-side-menus>

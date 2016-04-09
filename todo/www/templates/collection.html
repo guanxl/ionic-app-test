@@ -1,0 +1,25 @@
+<ion-view ng-controller="PlaylistsCtrl" view-title="我的收藏">
+    <ion-content class="app_home"  >
+        <ion-list>
+            <ion-item ng-repeat="playlist in playlists | filter:{heart: 'true'} " href="#/app/playlists/profile">
+                <div class="row">
+                    <div class="float-left  cardImg">
+                        <img src="css/Images/d1.png" alt="">
+                    </div>
+                    <div class="float-left  cardInfo">
+                        <div class="cardName">
+                            <p>{{ playlist.title }}</p>
+                        </div>
+                        <div class="cardCategory">
+                            <p>{{ playlist.title }}</p>
+                        </div>
+                        <div>
+                            <span class="icon ion-ios-heart-outline">{{ playlist.id }}</span>
+                            <span class="icon ion-ios-chatbubble-outline">{{ playlist.id }}</span>
+                        </div>
+                    </div>
+                </div>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>
