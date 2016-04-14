@@ -3,8 +3,16 @@
     <h1>Search</h1>
   </ion-content>
 </ion-view> -->
-<ion-view view-title="找医生" ng-controller="PlaylistsCtrl">
-    <ion-content class="app_find" scrollbar-y="false">
+<ion-view ng-controller="PlaylistsCtrl" class="app_android">
+    <ion-nav-buttons side="left">
+      <h1 class="title">找医生</h1>
+    </ion-nav-buttons>
+    
+    <ion-content class="app_find"  overflow-scroll="false">
+        <ion-refresher 
+            on-refresh="doRefresh();" 
+            refreshing-icon="ion-ios-eye-outline">
+        </ion-refresher>
         <div class="search-wrap">
             <div class="search">
                 <label class="item-input">
@@ -15,7 +23,7 @@
         </div>
         <ion-list>
             <ion-item ng-repeat="playlist in playlists | filter:{title:searchInput} ">
-                <a href="#/app/playlists/profile">
+                <a ui-sref="app.profile">
                     <div class="cardImg">
                         <img src="css/Images/luoxiaohei.jpg" alt="">
                     </div>

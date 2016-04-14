@@ -1,9 +1,9 @@
-<ion-view view-title="更多">
+<ion-view view-title="">
 	<ion-nav-buttons side="right">
 	  <button class="button button-clear">
 	  </button>
 	</ion-nav-buttons>
-    <ion-content class="app_more">
+    <ion-content class="app_more" overflow-scroll="false">
 		<ion-list>
             <h4> Profile Setting</h4>
             <ion-item>
@@ -42,7 +42,7 @@
                 </a>
             </ion-item>
             <ion-item class="item-icon-right">
-                <a href="#/app/more/about">
+                <a ui-sref="app.about">
                     <i class="icon ion-ios-arrow-right"></i> About
                 </a>
             </ion-item>

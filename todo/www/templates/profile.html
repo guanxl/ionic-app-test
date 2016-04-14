@@ -1,9 +1,12 @@
-<ion-view view-title="xxx医生"  ng-controller="PlaylistsCtrl">
+<ion-view ng-controller="PlaylistsCtrl">
+    <ion-nav-buttons side="left">
+        <h1 class="title">xxx医生</h1>
+    </ion-nav-buttons>
     <ion-nav-buttons side="right">
         <button class="button button-clear icon ion-ios-heart-outline">
         </button>
     </ion-nav-buttons>
-    <ion-content class="app_profile" overflow-scroll="true"  scrollbar-y="false">
+    <ion-content class="app_profile" overflow-scroll="false">
         <div class="profile-item-1">
             <div class="row">
                 <div class="col col-33">
@@ -25,8 +28,8 @@
             <ion-list>
                 <ion-item class="profile-contact-button">
                     <a href="#" class="icon ion-ios-email-outline"></a>
-                    <a href="#/app/playlists/profile/dialog" class="icon ion-ios-chatbubble-outline"></a>
-                    <a class="icon ion-ios-telephone-outline" ng-click="history()"></a>
+                    <a ui-sref="app.dialog" class="icon ion-ios-chatbubble-outline"></a>
+                    <a class="icon ion-ios-telephone-outline"></a>
                 </ion-item>
                 <ion-item class="profile-contact-detail">
                     <div>
@@ -51,5 +54,6 @@
                 </ion-item>
             </ion-list>
         </div>
+        <app-map style="width: 100%; height: 300px;" address="{{ address }}"></app-map>
     </ion-content>
 </ion-view>

@@ -4,131 +4,49 @@
 // 'starter' is the name of this angular module example (also set in a <body> attribute in index.html)
 // the 2nd parameter is an array of 'requires'
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers'])
+angular.module('starter', ['ionic', 'starter.controllers', 'ngCordova'])
 
-// .run(function($ionicPlatform) {
-//   $ionicPlatform.ready(function() {
-//     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-//     // for form inputs)
-//     if (window.cordova && window.cordova.plugins.Keyboard) {
-//       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-//       cordova.plugins.Keyboard.disableScroll(true);
-
-//     }
-//     if (window.StatusBar) {
-//       // org.apache.cordova.statusbar required
-//       StatusBar.styleDefault();
-//     }
-//   });
-// })
-
-.run(['$ionicPlatform', '$ionicPopup', '$rootScope', '$location', function($ionicPlatform, $ionicPopup, $rootScope, $location, $timeout, $ionicHistory, $cordovaToast) {
+.run(['$ionicPlatform', '$rootScope', '$location', '$timeout', '$ionicHistory', '$cordovaToast', '$cordovaKeyboard', function($ionicPlatform, $rootScope, $location, $timeout, $ionicHistory, $cordovaToast, $cordovaKeyboard) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
-        // for form inputs)
-        if (window.cordova && window.cordova.plugins.Keyboard) {
+        if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
             cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
-            cordova.plugins.Keyboard.disableScroll(true);
-
         }
         if (window.StatusBar) {
             // org.apache.cordova.statusbar required
-            StatusBar.styleDefault();
+            StatusBar.styleLightContent();
         }
     });
 
-    // 双击退出功能
-    // $ionicPlatform.registerBackButtonAction(function(e) {
-    //     function showConfirm() {
-    //         var confirmPopup = $ionicPopup.confirm({
-    //             title: '<strong>退出应用?</strong>',
-    //             template: '你确定要退出应用吗?',
-    //             okText: '退出',
-    //             cancelText: '取消'
-    //         });
-
-    //         confirmPopup.then(function(res) {
-    //             if (res) {
-    //                 ionic.Platform.exitApp();
-    //             } else {
-    //                 // alert('tui');
-    //             }
-    //         });
-    //     }
-    //     // 判断处于哪个页面时双击退出
-    //     if ($location.path() === '/app/playlists' || $location.path() === '/app/collection' || $location.path() === '/app/more' || $location.path() === '/app/login' || location.path() === '/app/search') {
-    //         if ($rootScope.backButtonPressedOnveToExit) {
-    //             ionic.Platform.exitApp();
-    //         } else {
-    //             if ($cordovaToast) {
-    //                 $rootScope.backButtonPressedOnveToExit = true;
-    //                 $cordovaToast.showShortTop('再按一次退出系统').then(function(success) {
-    //                     alert('a');
-    //                 }, function(error) {
-    //                     showConfirm();
-    //                 });
-    //                 setTimeout(function() {
-    //                     $rootScope.backButtonPressedOnveToExit = false;
-    //                 }, 2000);
-    //             } else {
-    //                 return false;
-    //             }
-    //         }
-    //     } else if ($ionicHistory.backView()) {
-    //         $ionicHistory.goBack();
-    //         showConfirm();
-    //     } else {
-    //         $rootScope.backButtonPressedOnveToExit = true;
-    //         $cordovaToast.showShortTop('再按一次退出系统');
-    //         setTimeout(function() {
-    //             $rootScope.backButtonPressedOnveToExit = false;
-    //         }, 2000);
-    //     }
-
-    //     e.preventDefalut();
-    //     return false;
-
-    // }, 101);
-
-
-
-    // 主页面显示退出提示框
+    //物理返回按钮控制&双击退出应用
     $ionicPlatform.registerBackButtonAction(function(e) {
-
-        e.preventDefault();
-
-        function showConfirm() {
-            var confirmPopup = $ionicPopup.confirm({
-                title: '<strong>退出应用?</strong>',
-                template: '你确定要退出应用吗?',
-                okText: '退出',
-                cancelText: '取消'
-            });
-
-            confirmPopup.then(function(res) {
-                if (res) {
-                    ionic.Platform.exitApp();
-                } else {
-                    // alert('tui');
-                }
-            });
-        }
-
-        // Is there a page to go back to?
-        if ($location.path() === '/app/playlists' || $location.path() === '/app/collection' || $location.path() === '/app/more' || $location.path() === '/app/login' || location.path() === '/app/search') {
-            showConfirm();
-        } else if ($rootScope.$viewHistory.backView) {
-            console.log('currentView:', $rootScope.$viewHistory.currentView);
-            // Go back in history
-            $rootScope.$viewHistory.backView.go();
+        //判断处于哪个页面时双击退出
+        if ($location.path() == '/app/playlists' || $location.path() == '/app/search' || $location.path() == '/app/collection' || $location.path() == '/app/more' || $location.path() == '/app/login' || $location.path() == '/app/regist') {
+            if ($rootScope.backButtonPressedOnceToExit) {
+                ionic.Platform.exitApp();
+            } else {
+                $rootScope.backButtonPressedOnceToExit = true;
+                $cordovaToast.showShortBottom('再按一次退出系统');
+                setTimeout(function() {
+                    $rootScope.backButtonPressedOnceToExit = false;
+                }, 2000);
+            }
+        } else if ($ionicHistory.backView()) {
+            if ($cordovaKeyboard.isVisible()) {
+                $cordovaKeyboard.close();
+            } else {
+                $ionicHistory.goBack();
+            }
         } else {
-            // This is the last page: Show confirmation popup
-            showConfirm();
+            $rootScope.backButtonPressedOnceToExit = true;
+            $cordovaToast.showShortBottom('再按一次退出系统');
+            setTimeout(function() {
+                $rootScope.backButtonPressedOnceToExit = false;
+            }, 2000);
         }
-
+        e.preventDefault();
         return false;
     }, 101);
-
 }])
 
 
@@ -170,15 +88,6 @@ angular.module('starter', ['ionic', 'starter.controllers'])
         }
     })
 
-    // .state('app.profile', {
-    //   url: '/profile',
-    //   views: {
-    //     'menuContent': {
-    //       templateUrl: 'templates/profile.html'
-    //     }
-    //   }
-    // })
-
     .state('app.collection', {
         url: '/collection',
         views: {
@@ -216,22 +125,13 @@ angular.module('starter', ['ionic', 'starter.controllers'])
     })
 
     .state('app.about', {
-      url: '/more/about',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/about.html'
+        url: '/more/about',
+        views: {
+            'menuContent': {
+                templateUrl: 'templates/about.html'
+            }
         }
-      }
     })
-
-    // .state('app.browse', {
-    //     url: '/browse',
-    //     views: {
-    //       'menuContent': {
-    //         templateUrl: 'templates/browse.html'
-    //       }
-    //     }
-    //   })
 
     .state('app.playlists', {
         url: '/playlists',
@@ -251,6 +151,11 @@ angular.module('starter', ['ionic', 'starter.controllers'])
                 controller: 'PlaylistCtrl'
             }
         }
+    })
+
+    .state('app.newItem', {
+        url: '/playlists/newItem',
+        
     });
     // if none of the above states are matched, use this as the fallback
     $urlRouterProvider.otherwise('/app/playlists');

@@ -51,7 +51,7 @@
     </ion-side-menu-content>
     <ion-side-menu side="left" width="260" class="header-bg">
         <!-- <ion-header-bar class="header-bg"></ion-header-bar> -->
-        <ion-content  >
+        <ion-content overflow-scroll="false" >
             <div class="col col-100 sideLogo" style="padding: 15px; display: flex; display: -webkit-flex; display: -webkit-box; -webkit-box-align: center; -webkit-align-items: center; align-items: center; ">
                 <div>
                     <img src="css/Images/d1.png" alt="" style="width: 80px;height: 80px;border-radius: 50%;">
@@ -63,27 +63,27 @@
             </div>
             <ion-list class="side_menu">
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/playlist">
+                    <a menu-close ui-sref="app.playlists">
                         <i class="icon ion-ios-home-outline"></i> 主页
                     </a>
                 </ion-item>
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/search">
+                    <a menu-close ui-sref="app.search">
                         <i class="icon ion-ios-search"></i> 寻找医生
                     </a>
                 </ion-item>
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/collection">
+                    <a menu-close ui-sref="app.collection">
                         <i class="icon ion-ios-person"></i> 我的收藏
                     </a>
                 </ion-item>
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/login">
+                    <a menu-close ui-sref="app.login">
                         <i class="icon ion-ios-bolt-outline"></i> 登录
                     </a>
                 </ion-item>
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/regist">
+                    <a menu-close ui-sref="app.regist">
                         <i class="icon ion-ios-pulse"></i> 注册
                     </a>
                 </ion-item>
@@ -93,7 +93,7 @@
                     </a>
                 </ion-item> -->
                 <ion-item class="sideItem">
-                    <a menu-close href="#/app/more">
+                    <a menu-close ui-sref="app.more">
                         <i class="icon ion-ios-more"></i> 更多
                     </a>
                 </ion-item>

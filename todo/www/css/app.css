@@ -14,13 +14,17 @@ input, textarea { background-color: transparent; }
 
 #mark { width: 100%;height: 100%;position: absolute; top: 0px; left: 0px; background-color: #ffffff;z-index: 9999; }
 
+.app_android .buttons-left { display: none; }
+
+
+
+
+
+
 .header-bg .title { text-align: center !important; }
 .header-bg>.buttons { width: 44px; }
 .header-bg .buttons span>a:before { color: #ffffff; }
 .header-bg>.back-button { color: #ffffff; }
-
-
-
 
 
 .home-search { width: 94%; margin: 0 auto; padding-bottom: 15px; }
@@ -37,8 +41,8 @@ input, textarea { background-color: transparent; }
 .cardAdd>span { width: 30px; height: 30px; border-radius: 50%; background-color: #0ebbf3; display: block;text-align: center; }
 .cardAdd>span:before { font-size: 30px; color: #fff;  }
 
-
-.cardImg>img { width: 140px; height: 120px; display: block; }
+.item-content .cardImg { width: 140px; height: 120px; overflow: hidden; }
+.cardImg>img { width: 100%; height: auto; display: block; }
 .item { padding: 0; border: 0; }
 
 .sideLogo>img { width: 100%; height: 100%; border-radius: 50%; max-width: 140px;}
@@ -173,10 +177,6 @@ input, textarea { background-color: transparent; }
 #registerForm input[type="button"] { width: 80%; margin: 30px auto; border-radius: 100px; background-color: transparent; border: 1px solid #ffffff; color: #ffffff; font-size: 16px; padding: 6px; display: block; }
 
 .app_register .bottomA { width: 100%; text-align: center; margin: 10px auto; }
-
-
-
-
 
 
 @media only screen and (min-width: 321px) and (max-width: 375px) {
